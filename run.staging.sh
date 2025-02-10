@@ -1,3 +1,5 @@
+#!/bin/sh
+
 if [ ! -f ./.staging.env ]; then
     echo "Staging .env file not found!"
     exit;
