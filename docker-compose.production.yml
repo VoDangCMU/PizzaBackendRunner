@@ -1,0 +1,15 @@
+version: '0.0.1'
+name: Pizza_Backend_Production
+services:
+  api:
+    image: 'realkhoa/pizza_ordering_backend:latest'
+    ports:
+      - 7682:7682
+    expose:
+      - 7682
+    environment:
+      - ENV=production
+      - NODE_ENV=production
+    env_file: '.production.env'
+    tty: true
+    stdin_open: true

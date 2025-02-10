@@ -1,0 +1,15 @@
+version: '0.0.1'
+name: Pizza_Backend_Staging
+services:
+  api:
+    image: 'realkhoa/pizza_ordering_backend_staging:latest'
+    ports:
+      - 9241:9241
+    expose:
+      - 9241
+    environment:
+      - ENV=staging
+      - NODE_ENV=staging
+    env_file: '.staging.env'
+    tty: true
+    stdin_open: true
